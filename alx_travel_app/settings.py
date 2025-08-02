@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'drf_yasg',
     'listings',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -115,4 +116,11 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ]
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'ALX Travel App API',
+    'DESCRIPTION': 'API for managing travel listings and bookings',
+    'VERSION': '1.0.0',
 }
